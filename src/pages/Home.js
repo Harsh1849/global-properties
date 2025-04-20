@@ -330,11 +330,11 @@ const Home = () => {
               </div>
             ))}
           </div>
-          {/* <div className="view-all-wrapper">
+          <div className="view-all-wrapper">
             <Link to="/properties" className="btn-view-all">
               View All Properties
             </Link>
-          </div> */}
+          </div>
         </section>
 
         {/* What Are You Looking For Section */}
@@ -459,6 +459,7 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Testimonials Section */}
         <section className="testimonials">
           <div className="container">
             <div className="section-header">
@@ -489,31 +490,11 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="blog-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>OUR BLOG</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            </div>
-            {/* Blog content will be added here */}
-          </div>
-        </section>
-
-        {/* Add Values section */}
+        {/* Values section */}
         <Values />
 
-        {/* Add Statistics section */}
+        {/* Statistics section */}
         <Statistics />
-
-        <section className="blog-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>OUR BLOG</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            </div>
-            {/* Blog content will be added here */}
-          </div>
-        </section>
       </div>
     </div>
   );
