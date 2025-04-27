@@ -1,290 +1,312 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import HeroCarousel from '../components/HeroCarousel';
-import PropertyCard from '../components/PropertyCard';
+// import PropertyCard from '../components/PropertyCard';
 import Values from '../components/Values';
 import Statistics from '../components/Statistics';
+import InvestmentGuideSection from '../components/InvestmentGuideSection';
+
+import PartnersSection from '../components/PartnersSection';
+import ServicesSection from '../components/ServicesSection';
+
 import '../styles/Home.css';
 
+// Import local images
+// import featured1 from '../assets/images/featured-1.jpg';
+// import featured2 from '../assets/images/featured-2.jpg';
+// import featured3 from '../assets/images/featured-3.jpg';
+// import featured4 from '../assets/images/featured-4.jpg';
+// import featured5 from '../assets/images/featured-5.jpg';
+// import featured6 from '../assets/images/featured-6.jpg';
+import apartments from '../assets/images/apartments.jpg';
+import houses from '../assets/images/houses.jpg';
+import commercial from '../assets/images/commercial.jpg';
+import luxury from '../assets/images/luxury.jpg';
+// import agent1 from '../assets/images/agent-1.jpg';
+// import agent2 from '../assets/images/agent-2.jpg';
+// import agent3 from '../assets/images/agent-3.jpg';
+// import agent4 from '../assets/images/agent-4.jpg';
+import testimonialsBg from '../assets/images/featured-2.jpg';
+
 const Home = () => {
-  const featuredProperties = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3',
-      title: 'Beautiful Single Home',
-      location: '123 Kathal St. Tampa City, FL',
-      price: 720000,
-      status: 'For Sale',
-      beds: 4,
-      baths: 4,
-      sqft: 920,
-      garages: 1,
-      featured: true
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3',
-      title: 'Modern Family Home',
-      location: '456 Brighton Ave. Miami, FL',
-      price: 825000,
-      status: 'For Rent',
-      beds: 4,
-      baths: 4,
-      sqft: 920,
-      garages: 1,
-      featured: true
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3',
-      title: 'Sweet Family Home',
-      location: '789 Park Rd. New York, NY',
-      price: 925000,
-      status: 'For Sale',
-      beds: 4,
-      baths: 4,
-      sqft: 920,
-      garages: 1,
-      featured: true
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3',
-      title: 'Luxury Villa',
-      location: '321 Ocean Drive, Miami Beach, FL',
-      price: 1250000,
-      status: 'For Sale',
-      beds: 5,
-      baths: 5,
-      sqft: 1200,
-      garages: 2,
-      featured: true
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3',
-      title: 'Modern Apartment',
-      location: '567 Downtown St. Los Angeles, CA',
-      price: 495000,
-      status: 'For Rent',
-      beds: 2,
-      baths: 2,
-      sqft: 750,
-      garages: 1,
-      featured: true
-    },
-    {
-      id: 6,
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3',
-      title: 'Cozy Townhouse',
-      location: '890 Lake View Dr. Seattle, WA',
-      price: 685000,
-      status: 'For Sale',
-      beds: 3,
-      baths: 3,
-      sqft: 850,
-      garages: 1,
-      featured: true
-    }
-  ];
+  // const featuredProperties = [
+  //   {
+  //     id: 1,
+  //     image: featured1,
+  //     title: 'Luxury Villa in Beverly Hills',
+  //     location: 'Beverly Hills, CA',
+  //     price: '$2,500,000',
+  //     status: 'For Sale',
+  //     beds: 5,
+  //     baths: 4,
+  //     sqft: 4500,
+  //     garages: 2,
+  //     featured: true
+  //   },
+  //   {
+  //     id: 2,
+  //     image: featured2,
+  //     title: 'Modern Apartment in Downtown',
+  //     location: 'Los Angeles, CA',
+  //     price: '$1,200,000',
+  //     status: 'For Sale',
+  //     beds: 3,
+  //     baths: 2,
+  //     sqft: 1800,
+  //     garages: 1,
+  //     featured: true
+  //   },
+  //   {
+  //     id: 3,
+  //     image: featured3,
+  //     title: 'Waterfront Mansion',
+  //     location: 'Malibu, CA',
+  //     price: '$4,800,000',
+  //     status: 'For Sale',
+  //     beds: 6,
+  //     baths: 5,
+  //     sqft: 6500,
+  //     garages: 3,
+  //     featured: true
+  //   },
+  //   {
+  //     id: 4,
+  //     image: featured4,
+  //     title: 'Contemporary Townhouse',
+  //     location: 'Santa Monica, CA',
+  //     price: '$1,800,000',
+  //     status: 'For Sale',
+  //     beds: 4,
+  //     baths: 3,
+  //     sqft: 2800,
+  //     garages: 2,
+  //     featured: true
+  //   },
+  //   {
+  //     id: 5,
+  //     image: featured5,
+  //     title: 'Luxury Penthouse',
+  //     location: 'Hollywood, CA',
+  //     price: '$3,200,000',
+  //     status: 'For Sale',
+  //     beds: 4,
+  //     baths: 3,
+  //     sqft: 3200,
+  //     garages: 2,
+  //     featured: true
+  //   },
+  //   {
+  //     id: 6,
+  //     image: featured6,
+  //     title: 'Estate Home',
+  //     location: 'Bel Air, CA',
+  //     price: '$5,500,000',
+  //     status: 'For Sale',
+  //     beds: 7,
+  //     baths: 6,
+  //     sqft: 8500,
+  //     garages: 4,
+  //     featured: true
+  //   }
+  // ];
 
   const propertyTypes = [
     {
       id: 1,
       title: 'Apartments',
-      icon: 'fa-building',
-      count: 156,
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      count: 45,
+      image: apartments,
+      icon: 'fa-building'
     },
     {
       id: 2,
       title: 'Houses',
-      icon: 'fa-home',
-      count: 89,
-      image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      count: 38,
+      image: houses,
+      icon: 'fa-home'
     },
     {
       id: 3,
       title: 'Commercial',
-      icon: 'fa-store',
-      count: 45,
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      count: 52,
+      image: commercial,
+      icon: 'fa-store'
     },
     {
       id: 4,
       title: 'Luxury',
-      icon: 'fa-crown',
-      count: 32,
-      image: 'https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      count: 28,
+      image: luxury,
+      icon: 'fa-crown'
     }
   ];
 
-  const recentProperties = [
-    {
-      id: 7,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3',
-      title: 'Modern Family Home',
-      location: '456 Brighton Ave. Miami, FL',
-      price: 825000,
-      status: 'For Rent',
-      beds: 4,
-      baths: 4,
-      sqft: 920,
-      garages: 1,
-      featured: false,
-      date: '2 days ago'
-    },
-    {
-      id: 8,
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3',
-      title: 'Sweet Family Home',
-      location: '789 Park Rd. New York, NY',
-      price: 925000,
-      status: 'For Sale',
-      beds: 4,
-      baths: 4,
-      sqft: 920,
-      garages: 1,
-      featured: false,
-      date: '3 days ago'
-    },
-    {
-      id: 9,
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3',
-      title: 'Luxury Villa',
-      location: '321 Ocean Drive, Miami Beach, FL',
-      price: 1250000,
-      status: 'For Sale',
-      beds: 5,
-      baths: 5,
-      sqft: 1200,
-      garages: 2,
-      featured: false,
-      date: '4 days ago'
-    },
-    {
-      id: 10,
-      image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3',
-      title: 'Modern Apartment',
-      location: '567 Downtown St. Los Angeles, CA',
-      price: 495000,
-      status: 'For Rent',
-      beds: 2,
-      baths: 2,
-      sqft: 750,
-      garages: 1,
-      featured: false,
-      date: '5 days ago'
-    }
-  ];
+  // const recentProperties = [
+  //   {
+  //     id: 7,
+  //     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3',
+  //     title: 'Modern Family Home',
+  //     location: '456 Brighton Ave. Miami, FL',
+  //     price: 825000,
+  //     status: 'For Rent',
+  //     beds: 4,
+  //     baths: 4,
+  //     sqft: 920,
+  //     garages: 1,
+  //     featured: false,
+  //     date: '2 days ago'
+  //   },
+  //   {
+  //     id: 8,
+  //     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3',
+  //     title: 'Sweet Family Home',
+  //     location: '789 Park Rd. New York, NY',
+  //     price: 925000,
+  //     status: 'For Sale',
+  //     beds: 4,
+  //     baths: 4,
+  //     sqft: 920,
+  //     garages: 1,
+  //     featured: false,
+  //     date: '3 days ago'
+  //   },
+  //   {
+  //     id: 9,
+  //     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3',
+  //     title: 'Luxury Villa',
+  //     location: '321 Ocean Drive, Miami Beach, FL',
+  //     price: 1250000,
+  //     status: 'For Sale',
+  //     beds: 5,
+  //     baths: 5,
+  //     sqft: 1200,
+  //     garages: 2,
+  //     featured: false,
+  //     date: '4 days ago'
+  //   },
+  //   {
+  //     id: 10,
+  //     image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3',
+  //     title: 'Modern Apartment',
+  //     location: '567 Downtown St. Los Angeles, CA',
+  //     price: 495000,
+  //     status: 'For Rent',
+  //     beds: 2,
+  //     baths: 2,
+  //     sqft: 750,
+  //     garages: 1,
+  //     featured: false,
+  //     date: '5 days ago'
+  //   }
+  // ];
 
-  const popularPlaces = [
-    {
-      id: 1,
-      name: 'Miami Beach',
-      image: 'https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-4.0.3',
-      properties: 156,
-      location: 'Florida, USA'
-    },
-    {
-      id: 2,
-      name: 'New York',
-      image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3',
-      properties: 245,
-      location: 'New York, USA'
-    },
-    {
-      id: 3,
-      name: 'Los Angeles',
-      image: 'https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixlib=rb-4.0.3',
-      properties: 189,
-      location: 'California, USA'
-    },
-    {
-      id: 4,
-      name: 'Chicago',
-      image: 'https://images.unsplash.com/photo-1513642629402-cb8354b7f5f1?ixlib=rb-4.0.3',
-      properties: 132,
-      location: 'Illinois, USA'
-    },
-    {
-      id: 5,
-      name: 'San Francisco',
-      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3',
-      properties: 178,
-      location: 'California, USA'
-    },
-    {
-      id: 6,
-      name: 'Seattle',
-      image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3',
-      properties: 145,
-      location: 'Washington, USA'
-    }
-  ];
+  // const popularPlaces = [
+  //   {
+  //     id: 1,
+  //     name: 'Miami Beach',
+  //     image: 'https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-4.0.3',
+  //     properties: 156,
+  //     location: 'Florida, USA'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'New York',
+  //     image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3',
+  //     properties: 245,
+  //     location: 'New York, USA'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Los Angeles',
+  //     image: 'https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixlib=rb-4.0.3',
+  //     properties: 189,
+  //     location: 'California, USA'
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Chicago',
+  //     image: 'https://images.unsplash.com/photo-1513642629402-cb8354b7f5f1?ixlib=rb-4.0.3',
+  //     properties: 132,
+  //     location: 'Illinois, USA'
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'San Francisco',
+  //     image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3',
+  //     properties: 178,
+  //     location: 'California, USA'
+  //   },
+  //   {
+  //     id: 6,
+  //     name: 'Seattle',
+  //     image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3',
+  //     properties: 145,
+  //     location: 'Washington, USA'
+  //   }
+  // ];
 
-  const ourAgents = [
-    {
-      id: 1,
-      name: 'John Smith',
-      role: 'Senior Agent',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3',
-      properties: 45,
-      phone: '+1 234 567 890',
-      email: 'john.smith@example.com',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 2,
-      name: 'Sarah Johnson',
-      role: 'Luxury Specialist',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3',
-      properties: 38,
-      phone: '+1 234 567 891',
-      email: 'sarah.johnson@example.com',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 3,
-      name: 'Michael Brown',
-      role: 'Commercial Expert',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3',
-      properties: 52,
-      phone: '+1 234 567 892',
-      email: 'michael.brown@example.com',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 4,
-      name: 'Emily Davis',
-      role: 'Residential Specialist',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3',
-      properties: 41,
-      phone: '+1 234 567 893',
-      email: 'emily.davis@example.com',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    }
-  ];
+  // const ourAgents = [
+  //   {
+  //     id: 1,
+  //     name: 'John Smith',
+  //     role: 'Senior Agent',
+  //     image: agent1,
+  //     properties: 45,
+  //     phone: '+1 (555) 123-4567',
+  //     email: 'john.smith@example.com',
+  //     social: {
+  //       facebook: '#',
+  //       twitter: '#',
+  //       instagram: '#',
+  //       linkedin: '#'
+  //     }
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Sarah Johnson',
+  //     role: 'Luxury Specialist',
+  //     image: agent2,
+  //     properties: 38,
+  //     phone: '+1 (555) 234-5678',
+  //     email: 'sarah.johnson@example.com',
+  //     social: {
+  //       facebook: '#',
+  //       twitter: '#',
+  //       instagram: '#',
+  //       linkedin: '#'
+  //     }
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Michael Brown',
+  //     role: 'Commercial Expert',
+  //     image: agent3,
+  //     properties: 52,
+  //     phone: '+1 (555) 345-6789',
+  //     email: 'michael.brown@example.com',
+  //     social: {
+  //       facebook: '#',
+  //       twitter: '#',
+  //       instagram: '#',
+  //       linkedin: '#'
+  //     }
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Emily Davis',
+  //     role: 'Residential Specialist',
+  //     image: agent4,
+  //     properties: 41,
+  //     phone: '+1 (555) 456-7890',
+  //     email: 'emily.davis@example.com',
+  //     social: {
+  //       facebook: '#',
+  //       twitter: '#',
+  //       instagram: '#',
+  //       linkedin: '#'
+  //     }
+  //   }
+  // ];
 
   const testimonials = [
     {
@@ -318,7 +340,7 @@ const Home = () => {
       <HeroCarousel />
       <div className="container">
         {/* Featured Properties Section */}
-        <section className="featured-properties">
+        {/* <section className="featured-properties">
           <div className="section-header">
             <h2>Featured Properties</h2>
             <p>Discover our handpicked selection of premium properties</p>
@@ -335,7 +357,7 @@ const Home = () => {
               View All Properties
             </Link>
           </div>
-        </section>
+        </section> */}
 
         {/* What Are You Looking For Section */}
         <section className="property-types">
@@ -359,64 +381,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Recently Properties Section */}
-        <section className="recent-properties">
-          <div className="section-header">
-            <h2>Recently Added Properties</h2>
-            <p>Discover our latest property listings</p>
-          </div>
-          <div className="properties-grid">
-            {recentProperties.map((property, index) => (
-              <div className="property-card-wrapper" key={property.id} style={{ animationDelay: `${index * 0.1}s` }}>
-                <PropertyCard property={property} />
-                <div className="property-date">
-                  <i className="fas fa-clock"></i>
-                  <span>{property.date}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="view-all-wrapper">
-            <Link to="/properties" className="btn-view-all">
-              View All Recent Properties
-            </Link>
-          </div>
-        </section>
-
-        {/* Popular Places Section */}
-        <section className="popular-places">
-          <div className="section-header">
-            <h2>Popular Places</h2>
-            <p>Explore properties in the most sought-after locations</p>
-          </div>
-          <div className="places-grid">
-            {popularPlaces.map((place, index) => (
-              <div className="place-card" key={place.id} style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="place-image">
-                  <img src={place.image} alt={place.name} />
-                  <div className="place-overlay">
-                    <div className="place-content">
-                      <h3>{place.name}</h3>
-                      <p className="place-location">{place.location}</p>
-                      <div className="place-properties">
-                        <i className="fas fa-home"></i>
-                        <span>{place.properties} Properties</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="view-all-wrapper">
-            <Link to="/locations" className="btn-view-all">
-              View All Locations
-            </Link>
-          </div>
-        </section>
-
         {/* Our Agents Section */}
-        <section className="our-agents">
+        {/* <section className="our-agents">
           <div className="section-header">
             <h2>Our Agents</h2>
             <p>Meet our team of experienced real estate professionals</p>
@@ -457,10 +423,17 @@ const Home = () => {
               View All Agents
             </Link>
           </div>
-        </section>
+        </section> */}
+
+        {/* Services Section */}
+        <ServicesSection />
+
+        {/* Values section */}
+        <Values />
+
 
         {/* Testimonials Section */}
-        <section className="testimonials">
+        <section className="testimonials" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${testimonialsBg})` }}>
           <div className="container">
             <div className="section-header">
               <h2>What Our Clients Say</h2>
@@ -490,11 +463,19 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Values section */}
-        <Values />
-
+        
         {/* Statistics section */}
         <Statistics />
+
+        {/* Investment Guide section */}
+        <InvestmentGuideSection />
+            
+
+        <PartnersSection />
+        
+
+
+
       </div>
     </div>
   );

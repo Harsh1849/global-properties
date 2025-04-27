@@ -1,7 +1,7 @@
 .footer {
-  background: #333;
-  color: #fff;
-  padding: 60px 0;
+  background: #1A1A1A;
+  color: #FFFFFF;
+  padding: 20px 0;
 }
 
 .footer-content {
@@ -14,7 +14,7 @@
 }
 
 .footer-section h3 {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.5rem;
   margin-bottom: 20px;
   position: relative;
@@ -27,11 +27,11 @@
   bottom: -10px;
   width: 50px;
   height: 2px;
-  background: #8DC63F;
+  background: #C5A572;
 }
 
 .footer-section p {
-  color: #ccc;
+  color: #CCCCCC;
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -46,13 +46,13 @@
 }
 
 .footer-section ul li a {
-  color: #ccc;
+  color: #CCCCCC;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #8DC63F;
+  color: #C5A572;
 }
 
 .subscribe-form {
@@ -63,24 +63,24 @@
 .subscribe-form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #555;
-  background: #444;
-  color: #fff;
+  border: 1px solid #555555;
+  background: #444444;
+  color: #FFFFFF;
   border-radius: 4px 0 0 4px;
 }
 
 .subscribe-form button {
   padding: 10px 20px;
-  background: #8DC63F;
+  background: #C5A572;
   border: none;
-  color: #fff;
+  color: #FFFFFF;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background: #7ab32e;
+  background: #B08A5A;
 }
 
 .social-links {
@@ -89,8 +89,8 @@
 }
 
 .social-links a {
-  color: #fff;
-  background: #444;
+  color: #FFFFFF;
+  background: #444444;
   width: 35px;
   height: 35px;
   display: flex;
@@ -101,6 +101,18 @@
 }
 
 .social-links a:hover {
-  background: #8DC63F;
+  background: #C5A572;
   transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #555555;
+  margin-top: 40px;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-top: 10px;
 } 

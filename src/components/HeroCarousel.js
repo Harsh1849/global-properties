@@ -3,6 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/HeroCarousel.css';
+import slide1 from '../assets/images/Home1.jpg';
+import slide2 from '../assets/images/Home2.jpg';
+import slide3 from '../assets/images/Home3.jpg';
 
 const HeroCarousel = () => {
   const settings = {
@@ -18,19 +21,19 @@ const HeroCarousel = () => {
 
   const slides = [
     {
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80',
-      title: 'SWEET HOME FOR SMALL FAMILY',
-      subtitle: 'Allow us to guide you through the innovative stress free approach in finding your dream Properties.',
+      image: slide1,
+      title: 'Your Dubai Real Estate Partner',
+      subtitle: 'Invest, Live, Prosper',
     },
     {
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      title: 'FIND YOUR DREAM HOME',
-      subtitle: 'Discover the perfect property that matches your lifestyle and preferences.',
+      image: slide2,
+      title: 'Your Dubai Real Estate Partner',
+      subtitle: 'Invest, Live, Prosper',
     },
     {
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-      title: 'LUXURY PROPERTIES',
-      subtitle: 'Explore our collection of premium properties in prime locations.',
+      image: slide3,
+      title: 'Your Dubai Real Estate Partner',
+      subtitle: 'Invest, Live, Prosper',
     },
   ];
 
@@ -52,8 +55,8 @@ const HeroCarousel = () => {
                 <h1>{slide.title}</h1>
                 <p>{slide.subtitle}</p>
                 <div className="hero-buttons">
-                  <button className="btn btn-primary">Get Started Now</button>
-                  <button className="btn btn-secondary">Learn More</button>
+                  <button className="btn btn-primary">Investment Guide</button>
+                  <button className="btn btn-secondary">Contact Us</button>
                 </div>
               </div>
             </div>
@@ -61,7 +64,7 @@ const HeroCarousel = () => {
         ))}
       </Slider>
 
-      <div className="search-form">
+      {/* <div className="search-form">
         <div className="search-container">
           <select className="search-input">
             <option value="">Area From</option>
@@ -118,7 +121,7 @@ const HeroCarousel = () => {
 
           <button className="search-button">SEARCH</button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

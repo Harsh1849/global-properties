@@ -7,50 +7,51 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Contact Us</h3>
-          <p>360 Harvest St, North Subract, London. United States Of Amrica.</p>
-          <p>Email: info@themevessel.com</p>
-          <p>Phone: +1 347-465-0659</p>
-        </div>
-
-        <div className="footer-section">
-          <h3>Properties Types</h3>
-          <ul>
-            <li><Link to="/properties/apartment">Apartment</Link></li>
-            <li><Link to="/properties/restaurant">Restaurant</Link></li>
-            <li><Link to="/properties/my-houses">My Houses</Link></li>
-            <li><Link to="/properties/villa-condo">Villa & Condo</Link></li>
-            <li><Link to="/properties/family-house">Family House</Link></li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/properties">Properties Details</Link></li>
-            <li><Link to="/account">My Account</Link></li>
-            <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><Link to="/investment-guide">Investment Guide</Link></li>
+            <li><Link to="/properties">Properties</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h3>Subscribe</h3>
+          <h3>Contact Us</h3>
+          <p>Level 5, Boulevard Plaza Tower 1, Sheikh Mohammed Bin Rashid Boulevard, Downtown Dubai, United Arab Emirates</p>
+          <p>Phone: +971 4 456 4488</p>
+          <p>Email: info@abbass.group</p>
+        </div>
+
+        <div className="footer-section">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><Link to="/terms">Terms and Conditions</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <h3>Subscribe For Updates</h3>
+          <p>Subscribe to our newsletter to receive the latest news and updates from our team.</p>
+
           <div className="subscribe-form">
-            <input type="email" placeholder="Your Email" />
-            <button type="submit">
-              <i className="fas fa-paper-plane"></i>
-            </button>
+            <input type="email" placeholder="Email" />
+            <button type="submit">Subscribe</button>
           </div>
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-github"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
+            <a href="/"><i className="fab fa-facebook-f"></i></a>
+            <a href="/"><i className="fab fa-twitter"></i></a>
+            <a href="/"><i className="fab fa-instagram"></i></a>
+            <a href="/"><i className="fab fa-linkedin-in"></i></a>
           </div>
         </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; 2023 ABBASS Global Properties L.L.C. All rights reserved</p>
       </div>
     </footer>
   );

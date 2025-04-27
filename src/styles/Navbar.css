@@ -1,60 +1,116 @@
 .navbar {
-  background: #fff;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  padding: 15px 0;
+  backdrop-filter: blur(10px);
 }
 
 .navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
 }
 
 .navbar-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .navbar-logo img {
   height: 40px;
-  margin-right: 10px;
+  width: auto;
 }
 
 .nav-menu {
   display: flex;
-  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 30px;
 }
 
 .nav-item {
-  margin: 0 15px;
+  position: relative;
 }
 
 .nav-link {
-  color: #333;
+  color: var(--primary-white);
   text-decoration: none;
+  font-size: 14px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  padding: 5px 0;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #8DC63F;
+  color: var(--primary-gold);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 10px 0;
+  }
 }
 
 .submit-property {
